@@ -54,7 +54,7 @@ ManoMeter::ManoMeter(QWidget *parent) : AbstractMeter(parent)
     setSuffix(QString(" [bar]")); // Measures
     setNameMeterOffset(20.0); // Device name downshift (now commented)
     setDigitFont(QFont("RobotoBold", 12, QFont::Normal));
-    setValueFont(QFont("RobotoBold", 16, QFont::Normal));
+    setValueFont(QFont("RobotoBold", 20, QFont::Normal));
     // QWidget
     setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
     setWindowTitle(tr("Analog Barmeter"));
@@ -106,7 +106,7 @@ void ManoMeter::paintBackground(QPainter& painter)
     QColor colorMarks(0, 0, 0); // Marks' on scale color
 //    QColor colorNominal(3, 169, 244); // Nominal color
 //    QColor colorCritical(255, 127, 127); // Critical color
-    QColor colorNominal(0, 0, 191); // Nominal color
+    QColor colorNominal(0, 95, 191); // Nominal color
     QColor colorCritical(191, 0, 0); // Critical color
     QColor colorErase(255, 255, 255); // Technical color for removing unwanted parts
     QRadialGradient gradHalo(QPointF(0.0, 0.0), 162.0, QPointF(0.0, 0.0));
@@ -234,7 +234,7 @@ void ManoMeter::paintEvent(QPaintEvent * )
     /*** COLORS INITIALIZING ***/
     QColor colorMarks(0, 0, 0); // Marks' on scale color
     QColor colorLow(63, 31, 0); // Low color)
-    QColor colorNominal(0, 0, 191); // Nominal color
+    QColor colorNominal(0, 95, 191); // Nominal color
     QColor colorCritical(191, 0, 0); // Critical color
     // Arrow gradient color (and central circle too)
     QConicalGradient gradArrow(QPointF(0.0, 124.0), 90.0);

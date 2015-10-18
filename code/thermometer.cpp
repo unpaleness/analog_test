@@ -49,7 +49,7 @@ ThermoMeter::ThermoMeter(QWidget* parent) : AbstractMeter(parent)
     setDigitOffset(12); // Scale values rightshift
     setSuffix(QString(" [C]")); // Measures
     setDigitFont(QFont("RobotoBold", 12, QFont::Normal));
-    setValueFont(QFont("RobotoBold", 16, QFont::Normal));
+    setValueFont(QFont("RobotoBold", 20, QFont::Normal));
     // QWidget
     setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
     setWindowTitle(tr("Analog Thermometer"));
@@ -79,7 +79,7 @@ void ThermoMeter::paintBackground(QPainter& painter)
     QColor colorLow(63, 31, 0, 255);
 //    QColor colorNominal(3, 169, 249, 255);
 //    QColor colorCritical(255, 127, 127, 255);
-    QColor colorNominal(0, 0, 191, 255);
+    QColor colorNominal(0, 95, 191, 255);
     QColor colorCritical(191, 0, 0, 255);
     // Rod bottom color (lower pie part)
     QRadialGradient gradBottom(QPointF(0.0, 255.0), 20.0, QPointF(0.0, 255.0));
@@ -154,7 +154,7 @@ void ThermoMeter::paintEvent(QPaintEvent* )
 
     /*** INITIALIZING ***/
     QColor colorLow(63, 31, 0, 255);
-    QColor colorNominal(0, 0, 191, 255);
+    QColor colorNominal(0, 95, 191, 255);
     QColor colorCritical(191, 0, 0, 255);
     // Setting up mercury color
     QColor colorMercury(colorLow);
